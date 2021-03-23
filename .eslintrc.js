@@ -4,7 +4,7 @@ module.exports = {
     node: true,
     es2020: true
   },
-  parser: '@typescript-eslint/parser',
+  // parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 2020,
     sourceType: 'module',
@@ -18,13 +18,9 @@ module.exports = {
     }
   },
   extends: [
-    'prettier',
-    'airbnb-base',
-    'plugin:react/recommended',
-    'plugin:promise/recommended',
-    'plugin:jest/recommended',
-    'plugin:@typescript-eslint/recommended',
-    'prettier/@typescript-eslint',
+    'plugin:import/errors',
+    'plugin:import/warnings',
+    'plugin:import/typescript',
     'plugin:prettier/recommended'
   ],
   rules: {
@@ -49,16 +45,17 @@ module.exports = {
     'max-len': [
       'error',
       {
-        code: 100,
-        tabWidth: 2,
+        code: 120,
+        tabWidth: 4,
         comments: 120,
         ignoreTrailingComments: true,
         ignoreUrls: true,
+        ignoreStrings: true,
         ignoreTemplateLiterals: true,
         ignoreRegExpLiterals: true,
         ignorePattern: '^\\s*var\\s.+=\\s*require\\s*\\('
       }
     ]
   },
-  plugins: ['promise', 'jest']
+  plugins: ['prettier']
 };
