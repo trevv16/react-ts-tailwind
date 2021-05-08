@@ -7,7 +7,7 @@ export default function SeoHelmet(props: any): any {
     <Helmet>
       <title>{props.title}</title>
       <meta name='description' content={props.description} />
-      <meta name={`og:${props.title}`} property={`og:${SITE_NAME}`} content={props.description} />
+      <meta name={`og:${props.title} | ${SITE_NAME}`} property={`og:${SITE_NAME}`} content={props.description} />
       <meta name='twitter:card' content='summary' />
       <meta name='twitter:site' content='@trevva_' />
       <meta name='twitter:title' content={props.title} />

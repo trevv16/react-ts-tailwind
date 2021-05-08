@@ -1,8 +1,10 @@
 import React from 'react';
+import { SeoHelmet } from '../../components/index';
 
 export default function SignInPage() {
   return (
-    <div>
+    <>
+      <SeoHelmet title='Sign In' description='' image='' image_alt='' />
       <div className='min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8'>
         <div className='sm:mx-auto sm:w-full sm:max-w-md'>
           <img
@@ -143,6 +145,6 @@ export default function SignInPage() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
