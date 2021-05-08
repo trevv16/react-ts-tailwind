@@ -19,6 +19,7 @@
     "humanize-plus": "^1.8.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-icons": "^4.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "typescript": "^4.1.2",
@@ -67,12 +68,16 @@
     "eslint": "^7.22.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.23.0",
     "husky": "^5.2.0",
     "lint-staged": "^10.5.4",
     "postcss": "^7.0.35",
     "prettier": "^2.2.1",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.3"
+  },
+  "engines": {
+    "node": "15.11.0",
+    "npm": "7.10.0"
   }
 }
