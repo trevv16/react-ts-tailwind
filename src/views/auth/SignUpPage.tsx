@@ -25,15 +25,15 @@ export default function SignUpPage() {
           <div className='bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10'>
             <form className='space-y-6' action='#' method='POST'>
               <div>
-                <label htmlFor='firstName' className='block text-sm font-medium text-gray-700'>
+                <label htmlFor='first_name' className='block text-sm font-medium text-gray-700'>
                   First Name
                 </label>
                 <div className='mt-1'>
                   <input
-                    id='firstName'
-                    name='firstName'
+                    id='first_name'
+                    name='first_name'
                     type='text'
-                    autoComplete='firstName'
+                    autoComplete='given-name'
                     required
                     className='appearance-none block w-full px-3 py-2 border border-gray rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-primary sm:text-sm'
                   />
@@ -41,15 +41,15 @@ export default function SignUpPage() {
               </div>
 
               <div>
-                <label htmlFor='lastName' className='block text-sm font-medium text-gray-700'>
+                <label htmlFor='last_name' className='block text-sm font-medium text-gray-700'>
                   Last Name
                 </label>
                 <div className='mt-1'>
                   <input
-                    id='lastName'
-                    name='lastName'
+                    id='last_name'
+                    name='last_name'
                     type='text'
-                    autoComplete='lastName'
+                    autoComplete='family-name'
                     required
                     className='appearance-none block w-full px-3 py-2 border border-gray rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-primary sm:text-sm'
                   />
@@ -81,7 +81,7 @@ export default function SignUpPage() {
                     id='password'
                     name='password'
                     type='password'
-                    autoComplete='current-password'
+                    autoComplete='new-password'
                     required
                     className='appearance-none block w-full px-3 py-2 border border-gray rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-primary sm:text-sm'
                   />
