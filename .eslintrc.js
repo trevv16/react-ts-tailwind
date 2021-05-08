@@ -21,9 +21,15 @@ module.exports = {
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:import/typescript',
-    'plugin:prettier/recommended'
+    'plugin:prettier/recommended',
+    'plugin:jsx-a11y/recommended',
+    'plugin:flowtype/recommended',
+    'plugin:jest/style',
+    'react-app'
   ],
   rules: {
+    'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
+    'react-hooks/exhaustive-deps': 'warn', // Checks effect dependencies
     quotes: [
       'error',
       'single',
@@ -57,5 +63,5 @@ module.exports = {
       }
     ]
   },
-  plugins: ['prettier']
+  plugins: ['prettier', 'jsx-a11y', 'flowtype', 'jest', 'testing-library', 'react-hooks']
 };
