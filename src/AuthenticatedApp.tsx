@@ -1,8 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
-
 import { HomePage, Error500, Error404 } from './views/index';
-import { Navigation, Footer, AppLayout } from './components/index';
+import { AppLayout } from './components/index';
 
 export default function PublicApp() {
   const SignOutHandler = () => {

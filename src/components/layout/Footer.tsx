@@ -28,7 +28,12 @@ export default function Footer() {
               <Icon name='github' />
             </a>
 
-            <a href='https://www.trevornjeru.com' target='_blank' className='text-gray-400 hover:text-gray-500'>
+            <a
+              href='https://www.trevornjeru.com'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='text-gray-400 hover:text-gray-500'
+            >
               <span className='sr-only'>My Website</span>
               <Icon name='web' />
             </a>
