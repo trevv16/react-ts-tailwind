@@ -1,22 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import PublicApp from './PublicApp';
-import AuthenticatedApp from './AuthenticatedApp';
+// import AuthenticatedApp from './AuthenticatedApp';
 
 export default function App(props: any) {
-  const [checkLoggedIn, setCheckLoggedIn] = useState(false);
-  const { isLoggedIn } = props;
+  // const [checkLoggedIn, setCheckLoggedIn] = useState(false);
+  // const { isLoggedIn } = props;
 
-  useEffect(() => {
-    if (localStorage.getItem('token')) {
-      setCheckLoggedIn(true);
-    } else {
-      setCheckLoggedIn(false);
-    }
-  }, [isLoggedIn]);
+  // useEffect(() => {
+  //   if (localStorage.getItem('token')) {
+  //     setCheckLoggedIn(true);
+  //   } else {
+  //     setCheckLoggedIn(false);
+  //   }
+  // }, [isLoggedIn]);
 
-  if (checkLoggedIn === false && !localStorage.getItem('token')) {
-    return <PublicApp />;
-  }
+  // if (checkLoggedIn === false && !localStorage.getItem('token')) {
+  //   return <PublicApp />;
+  // }
 
-  return <AuthenticatedApp />;
+  // return <AuthenticatedApp />;
+  return <PublicApp />;
 }
