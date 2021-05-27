@@ -1,23 +1,63 @@
 import React from 'react';
+import { nanoid } from 'nanoid';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { SITE_NAME, SITE_IMG, SITE_IMG_ALT } from './Config';
+import { HomePage, Error500, Error404 } from './views/index';
+import { PublicLayout } from './components/index';
 
-import { HomePage, Error500, Error404, SignUpPage, SignInPage, ForgotPage, ResetPasswordPage } from './views/index';
-import { Navigation, Footer, PublicLayout } from './components/index';
+const pages = [
+  {
+    path: '/',
+    title: `${SITE_NAME}`,
+    description: '',
+    image: SITE_IMG,
+    image_alt: SITE_IMG_ALT,
+    component: HomePage
+  }
+  // {
+  //   path: '/signup',
+  //   title: `Sign Up | ${SITE_NAME}`,
+  //   description: '',
+  //   image: SITE_IMG,
+  //   image_alt: SITE_IMG_ALT,
+  //   component: SignUpPage
+  // },
+  // {
+  //   path: '/signin',
+  //   title: `Sign In | ${SITE_NAME}`,
+  //   description: '',
+  //   image: SITE_IMG,
+  //   image_alt: SITE_IMG_ALT,
+  //   component: SignInPage
+  // },
+  // {
+  //   path: '/forgot',
+  //   title: `Forgot Password | ${SITE_NAME}`,
+  //   description: '',
+  //   image: SITE_IMG,
+  //   image_alt: SITE_IMG_ALT,
+  //   component: ForgotPage
+  // },
+  // {
+  //   path: '/reset-password/:resetToken',
+  //   title: `Reset Password | ${SITE_NAME}`,
+  //   description: '',
+  //   image: SITE_IMG,
+  //   image_alt: SITE_IMG_ALT,
+  //   component: ResetPasswordPage
+  // }
+];
 
 export default function PublicApp() {
   return (
     <div>
-      <Navigation />
       <Router>
         <PublicLayout>
           <Switch>
             {/* Auth Routes */}
-            <Route exact path='/signup' component={SignUpPage} />
-            <Route exact path='/signin' component={SignInPage} />
-            <Route exact path='/forgot' component={ForgotPage} />
-            <Route exact path='/reset-password/:resetToken' component={ResetPasswordPage} />
-
-            <Route exact path='/' component={HomePage} />
+            {pages.map((page: PageProps) => (
+              <Route key={nanoid()} {...page} />
+            ))}
 
             {/* Error Pages */}
             <Route exact path='/500' component={Error500} />
@@ -26,7 +66,6 @@ export default function PublicApp() {
           </Switch>
         </PublicLayout>
       </Router>
-      <Footer />
     </div>
   );
 }
