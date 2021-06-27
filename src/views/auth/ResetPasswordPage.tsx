@@ -1,10 +1,32 @@
 import React, { FC } from 'react';
-import { SeoHelmet } from '../../components/index';
+import { Helmet } from 'react-helmet-async';
+import { SITE_NAME, SITE_URL, SITE_IMG, SITE_DESC } from '../../Config';
 
 const ResetPasswordPage: FC = () => {
+  const title = `Reset Password | ${SITE_NAME}`;
+
   return (
     <>
-      <SeoHelmet title='Reset Password' description='' image='' image_alt='' />
+      <Helmet>
+        <html lang='en' />
+        <title>{title}</title>
+        <link rel='canonical' href={SITE_URL} />
+        <meta name='description' content={SITE_DESC} />
+        {/* OG SEO */}
+        <meta property='og:locale' content='en_us' />
+        <meta property='og:url' content={SITE_URL} />s
+        <meta property='og:type' content='website' />
+        <meta property='og:title' content={title} />
+        <meta property='og:description' content={SITE_DESC} />
+        <meta property='og:image' content={SITE_IMG} />
+        <meta property='og:image:alt' content={SITE_DESC} />
+        {/* Twitter SEO */}
+        <meta name='twitter:card' content='summary' />
+        <meta name='twitter:title' content={SITE_IMG} />
+        <meta name='twitter:description' content={SITE_DESC} />
+        <meta name='twitter:image' content={SITE_IMG} />
+        <meta name='twitter:image:alt' content={SITE_DESC} />
+      </Helmet>
       <div className='min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8'>
         <div className='sm:mx-auto sm:w-full sm:max-w-md'>
           <img
