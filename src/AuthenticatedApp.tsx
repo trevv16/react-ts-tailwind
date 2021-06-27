@@ -1,7 +1,20 @@
 import React from 'react';
+import { nanoid } from 'nanoid';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import { HomePage, Error500, Error404 } from './views/index';
 import { AppLayout } from './components/index';
+
+type RouteProps = {
+  path: string;
+  component: any;
+};
+
+const pages = [
+  {
+    path: '/app',
+    component: HomePage
+  }
+];
 
 export default function PublicApp() {
   const SignOutHandler = () => {
@@ -19,8 +32,10 @@ export default function PublicApp() {
           <Switch>
             <Route exact path='/signout' component={SignOutHandler} />
 
-            {/* Admin Routes */}
-            {/* <Route exact path='/app' component={DashboardPage} /> */}
+            {/* App Routes */}
+            {pages.map((page: RouteProps) => (
+              <Route key={nanoid()} {...page} />
+            ))}
 
             {/* Error Pages */}
             <Route exact path='/500' component={Error500} />

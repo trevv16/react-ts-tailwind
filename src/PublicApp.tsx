@@ -1,49 +1,33 @@
 import React from 'react';
 import { nanoid } from 'nanoid';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { SITE_NAME, SITE_IMG, SITE_IMG_ALT } from './Config';
 import { HomePage, Error500, Error404 } from './views/index';
 import { PublicLayout } from './components/index';
+
+type RouteProps = {
+  path: string;
+  component: any;
+};
 
 const pages = [
   {
     path: '/',
-    title: `${SITE_NAME}`,
-    description: '',
-    image: SITE_IMG,
-    image_alt: SITE_IMG_ALT,
     component: HomePage
   }
   // {
   //   path: '/signup',
-  //   title: `Sign Up | ${SITE_NAME}`,
-  //   description: '',
-  //   image: SITE_IMG,
-  //   image_alt: SITE_IMG_ALT,
   //   component: SignUpPage
   // },
   // {
   //   path: '/signin',
-  //   title: `Sign In | ${SITE_NAME}`,
-  //   description: '',
-  //   image: SITE_IMG,
-  //   image_alt: SITE_IMG_ALT,
   //   component: SignInPage
   // },
   // {
   //   path: '/forgot',
-  //   title: `Forgot Password | ${SITE_NAME}`,
-  //   description: '',
-  //   image: SITE_IMG,
-  //   image_alt: SITE_IMG_ALT,
   //   component: ForgotPage
   // },
   // {
   //   path: '/reset-password/:resetToken',
-  //   title: `Reset Password | ${SITE_NAME}`,
-  //   description: '',
-  //   image: SITE_IMG,
-  //   image_alt: SITE_IMG_ALT,
   //   component: ResetPasswordPage
   // }
 ];
@@ -54,8 +38,8 @@ export default function PublicApp() {
       <Router>
         <PublicLayout>
           <Switch>
-            {/* Auth Routes */}
-            {pages.map((page: PageProps) => (
+            {/* Public Routes */}
+            {pages.map((page: RouteProps) => (
               <Route key={nanoid()} {...page} />
             ))}
 
