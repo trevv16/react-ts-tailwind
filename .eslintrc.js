@@ -48,7 +48,7 @@ module.exports = {
       }
     ],
     'max-len': [
-      'error',
+      'warning',
       {
         code: 120,
         tabWidth: 4,
