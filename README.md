@@ -14,6 +14,7 @@ Built with [Create React App](https://create-react-app.dev/), [Typescript](https
 - [ ] AuthenticatedApp.tsx
 - [ ] Navigation.tsx
 - [ ] Footer.tsx
+- [ ] utils/seo.tsx
 - [x] logo
 - [x] favicons
 - [x] manifest.json
