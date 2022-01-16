@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaInstagram, FaFacebook, FaTwitter } from 'react-icons/fa';
 import { IoIosGlobe } from 'react-icons/io';
 
 type IconProps = {
@@ -20,6 +20,12 @@ export default function Icon(props: IconProps) {
     switch (icon) {
       case 'instagram':
         return <FaInstagram className={`${size} flex-shrink-0 hover:text-gray-500`} />;
+
+      case 'facebook':
+        return <FaFacebook className={`${size} flex-shrink-0 hover:text-gray-500`} />;
+
+      case 'twitter':
+        return <FaTwitter className={`${size} flex-shrink-0 hover:text-gray-500`} />;
 
       case 'github':
         return <FaGithub className={`${size} flex-shrink-0 hover:text-gray-500`} />;
