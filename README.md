@@ -4,18 +4,20 @@
 
 Built with [Create React App](https://create-react-app.dev/), [Typescript](https://www.typescriptlang.org/), [Tailwind CSS](https://tailwindcss.com/).
 
+#### Project setup tasks
+
 - [ ] config.ts
 - [ ] package.json
 - [ ] .env
 - [ ] tailwind.config.js
-- [x] global.d.ts
+- [ ] global.d.ts
 - [ ] App.tsx
 - [ ] PublicApp.tsx
 - [ ] AuthenticatedApp.tsx
 - [ ] Navigation.tsx
 - [ ] Footer.tsx
 - [ ] utils/seo.tsx
-- [x] logo
-- [x] favicons
-- [x] manifest.json
-- [x] add tests
+- [ ] logo
+- [ ] favicons
+- [ ] manifest.json
+- [ ] add tests
